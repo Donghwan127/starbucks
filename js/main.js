@@ -1,20 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click',function() {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus',function() {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder','통합검색');
-});
-
-searchInputEl.addEventListener('blur',function() {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder','');
-});
-
 const badgeEl = document.querySelector("header .badges");
 
 window.addEventListener("scroll", _.throttle(function() {
@@ -144,6 +127,3 @@ spyEls.forEach(function(spyEl) {
     .setClassToggle(spyEl, 'show')                 //spyEl에 show라는 class를 추가함
     .addTo(new ScrollMagic.Controller());                 
 });
-
-const thisYear = document.querySelector('.this-year')
-thisYear.textContent = new Date().getFullYear()  //현재 년도 가져옴
